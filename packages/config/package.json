@@ -1,0 +1,14 @@
+{
+  "name": "@petcare/config",
+  "version": "0.0.0",
+  "private": true,
+  "sideEffects": ["*.css"],
+  "exports": {
+    "./globals.css": "./globals.css",
+    "./postcss": "./postcss.config.mjs"
+  },
+  "peerDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "tailwindcss": "^4"
+  }
+}

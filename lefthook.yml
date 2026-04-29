@@ -1,0 +1,9 @@
+# https://github.com/evilmartians/lefthook
+pre-commit:
+  parallel: true
+  jobs:
+    - name: lint
+      glob:
+        - "apps/**/*.{js,jsx,ts,tsx,mjs,cjs}"
+        - "packages/**/*.{js,jsx,ts,tsx,mjs,cjs}"
+      run: pnpm -r --if-present run lint

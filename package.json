@@ -1,0 +1,45 @@
+{
+  "name": "petcare",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "admin": "pnpm --filter admin dev",
+    "super-admin": "pnpm --filter super-admin dev",
+    "vet": "pnpm --filter vet dev",
+    "web": "pnpm --filter website dev",
+    "dev": "turbo run dev",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build -o storybook-static",
+    "prepare": "node scripts/lefthook-prepare.cjs",
+    "lint": "pnpm -r --if-present run lint",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.30.2",
+  "devDependencies": {
+    "@petcare/config": "workspace:*",
+    "@storybook/addon-essentials": "^8.6.18",
+    "@storybook/addon-interactions": "^8.6.18",
+    "@storybook/blocks": "^8.6.18",
+    "@storybook/react": "^8.6.18",
+    "@storybook/react-vite": "^8.6.18",
+    "@storybook/test": "^8.6.18",
+    "@tailwindcss/vite": "^4",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "lefthook": "^2.1.6",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "storybook": "^8.6.18",
+    "tailwindcss": "^4",
+    "turbo": "^2.9.6",
+    "typescript": "^5",
+    "vite": "^6.3.5"
+  },
+  "dependencies": {
+    "lucide-react": "^1.12.0"
+  }
+}

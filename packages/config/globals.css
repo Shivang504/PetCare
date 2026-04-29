@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f4f7fe;
+  --foreground: #0f172a;
+  --dashboard-primary: #0066ff;
+  --dashboard-primary-soft: #e8f1ff;
+  --card-shadow: 0 1px 2px rgb(15 23 42 / 0.04), 0 8px 24px rgb(15 23 42 / 0.06);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-dashboard-primary: var(--dashboard-primary);
+  --color-dashboard-primary-soft: var(--dashboard-primary-soft);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+.dashboard-card {
+  box-shadow: var(--card-shadow);
+}
+
+
+
+/* The container */
+.custom-scroll {
+  scrollbar-width: thin; /* Firefox support */
+  scrollbar-color: transparent transparent; /* Firefox support */
+  transition: scrollbar-color 0.3s ease;
+}
+
+.custom-scroll:hover {
+  scrollbar-color: #cbd5e1 transparent; /* Firefox support: thumb color */
+}
+
+/* Chrome, Edge, and Safari */
+.custom-scroll::-webkit-scrollbar {
+  width: 6px; /* Slightly wider for better hit area, but we will make it look thin */
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+  background: transparent; /* Keep the track invisible */
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  /* This creates the "hidden" effect */
+  background-color: rgba(148, 163, 184, 0); 
+  border-radius: 20px;
+  /* Add a transparent border to make the thumb appear thinner and floating */
+  border: 2px solid transparent;
+  background-clip: content-box;
+  transition: background-color 0.3s ease;
+}
+
+.custom-scroll:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(148, 163, 184, 0.5); /* Soft slate-400 */
+}
+
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(100, 116, 139, 0.8); /* Darker slate-500 on direct hover */
+}
